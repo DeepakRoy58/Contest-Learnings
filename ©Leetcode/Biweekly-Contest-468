@@ -1,0 +1,13 @@
+Maximum Total SUbArray Sum 1:
+class Solution {
+public:
+    long long maxTotalValue(vector<int>& nums, int k) {
+        vector<int>deepakRoy = nums ;
+
+        int maxVal = *max_element(nums.begin() , nums.end());
+        int minVal = *min_element(nums.begin() , nums.end()) ;
+
+        long long ans = (long long )(maxVal-minVal);
+        return ans * k;
+    }
+};
